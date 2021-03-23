@@ -35,38 +35,57 @@
         padding-top: 60px
     a  
         text-decoration: none
-        padding-right: 67px
+        padding: 66px 30px 18px 20px
         padding-top: 60px
         font-size: 16px
         color: #ffffff
         font-weight: 500
         font-family: "Maven Pro"
         &:hover
-            color: #a388f0
+            color: #6e45e2
+            border-bottom: 2px solid #6e45e2
 .button
     padding: 60px 83px 0 33px
     a
-        padding: 22px 32px
+        padding: 16px 32px
         border: 1px solid #fff
         border-radius: 25px
         font-size: 12px
-        letter-spacing: 1px
         color: #fff
         font-weight: 700
         font-family: "Maven Pro"
         text-transform: uppercase
         text-decoration: none
         &:hover
-            border: 1px solid #a388f0
-            color: #a388f0
+            border: 1px solid #6e45e2
+            color: #6e45e2
 .header-text
     text-align: center
     .social-marketing
+        position: relative
+        margin: 0
         font-size: 14px
         color: #fff
         font-weight: 700
         font-family: "Maven Pro"
-    h1
+        &::before
+            content: ''
+            position: absolute
+            width: 25px
+            border: 1px solid #fff
+            bottom: 7px
+            left: 42%
+        &::after
+            content: ''
+            position: absolute
+            width: 25px
+            border: 1px solid #fff 
+            bottom: 7px
+            right: 42%
+    h2
+        margin: 0
+        padding-top: 40px
+        padding-bottom: 22px  
         font-size: 86px
         color: #fff
         font-weight: 500
@@ -74,6 +93,7 @@
         text-align: center
     .description
         display: inline-block
+        margin-top: 0
         margin-bottom: 180px
         width: 372px
         font-size: 16px
@@ -91,7 +111,7 @@
         background-color: #fff
         display: inline-block
         &:hover
-            background-color: #a388f0
+            background-color: #6e45e2
             img
                 filter: invert(50%) brightness(100)
     img
