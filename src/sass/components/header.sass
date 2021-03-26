@@ -6,6 +6,10 @@
     display: flex
     justify-content: space-between  
     margin-bottom: 198px
+    @media screen and ( max-width: 1140px )
+        margin-bottom: 100px
+        justify-content: space-evenly
+        flex-wrap: wrap
 .main-foto
     background: fixed url(../img/robertson.png) no-repeat center center/cover, linear-gradient(-60deg, #87d3cd 0%, #6d45e1 100%)
 .top-menu
@@ -16,44 +20,106 @@
     img
         height: 48px
         padding: 48px 0 0 50px
+        @media screen and ( max-width: 1140px )
+            padding-left: 0
+            
     h1
         margin: 0
         padding: 52px 0 0 18px
-        font-size: 30px
+        font: 700 30px Maven Pro
         letter-spacing: 6px
         color: #fff
-        font-weight: 700
-        font-family: "Maven Pro"
         text-transform: uppercase
 .menu
+    display: flex
     ul
         margin: 0
         padding: 0
         list-style: none
         display: flex
+    .list
+        @media screen and ( max-width:1140px  )     //адаптив
+            visibility: hidden
+            display: none
     li
         padding-top: 60px
+        @media screen and ( max-width: 1140px )
+            padding-top: 30px            
     a  
         text-decoration: none
         padding: 66px 30px 18px 20px
         padding-top: 60px
-        font-size: 16px
-        color: #ffffff
-        font-weight: 500
-        font-family: "Maven Pro"
+        font: 500 16px Maven Pro
+        color: #fff
         &:hover
             border-bottom: 2px solid #fff
             transform: scaleX(18)
+    .chekbox
+        position: absolute
+        visibility: hidden
+        width: 30px
+        height: 30px
+        top: 50px
+    .chekbox:checked+.burger
+        justify-content: center
+    .checkbox:checked~ul
+        display: block
+    .burger
+        position: relative
+        visibility: hidden
+        display: none
+        display: flex
+        justify-content: center
+        width: 30px
+        height: 30px
+        overflow: hidden
+        background-color: #4f4f6f
+        border-radius: 5px
+        cursor: pointer
+        // transition: all .5s ease
+        top: 52px
+        left: 4px
+        &:hover
+            background-color: lightgrey
+        @media screen and ( max-width:1140px  )          //адаптив
+            visibility: visible
+    // .burger:hover span:before
+    //         transform: translateX(50px)
+    // .burger:hover span:after
+    //         transform: translateX(-50px)
+    // .burger:hover span
+    //         height: 25px
+    .burger span,
+    .burger span:before,
+    .burger span:after
+        content: ""
+        position: absolute
+        height: 4px
+        background-color: #fff
+        border-radius: 3px
+        // transition: all .5s cubic-bezier(.19,-0.62,.78,1.53)
+    .burger span
+        width: 80%
+        top: 13px
+        // transition-delay: .5s
+    .burger span:before
+        width: 100%
+        top: 8px
+        left: 0
+    .burger span:after
+        width: 100%
+        top: -8px
+        left: 0
+        // transition-delay: .25s
+
 .button
     padding: 60px 50px 0 33px
     a
         padding: 16px 32px
         border: 1px solid #fff
         border-radius: 25px
-        font-size: 12px
+        font: 700 12px Maven Pro
         color: #fff
-        font-weight: 700
-        font-family: "Maven Pro"
         text-transform: uppercase
         text-decoration: none
         &:hover
@@ -66,10 +132,8 @@
         display: inline-block
         position: relative
         margin: 0
-        font-size: 14px
+        font: 700 14px Maven Pro
         color: #fff
-        font-weight: 700
-        font-family: "Maven Pro"
         &::before
             content: ''
             position: absolute
@@ -88,21 +152,23 @@
         margin: 0
         padding-top: 40px
         padding-bottom: 22px  
-        font-size: 86px
+        font: 500 86px Maven Pro
         color: #fff
-        font-weight: 500
-        font-family: "Maven Pro"
         text-align: center
+        @media screen and ( max-width: 500px )
+            font-size: 70px
+            
     .description
         display: inline-block
         margin-top: 0
         margin-bottom: 180px
         width: 372px
-        font-size: 16px
         color: #fff
-        font-weight: 400
-        font-family: "Maven Pro"
+        font: 400 16px Maven Pro
         text-align: center
+        @media screen and ( max-width: 380px )
+            display: contents
+            
 .arrows
     text-align: center
     a
