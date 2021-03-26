@@ -53,17 +53,17 @@
         color: #fff
         &:hover
             border-bottom: 2px solid #fff
-            transform: scaleX(18)
-    .chekbox
+    .checkbox
         position: absolute
         visibility: hidden
         width: 30px
         height: 30px
         top: 50px
-    .chekbox:checked+.burger
-        justify-content: center
-    .checkbox:checked~ul
-        display: block
+        &:checked+.burger
+            justify-content: center
+        &:checked~ul
+            display: block
+            visibility: visible
     .burger
         position: relative
         visibility: hidden

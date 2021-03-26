@@ -40,8 +40,10 @@
 .content-box
     display: flex
     justify-content: center
-    flex-wrap: wrap
     margin-bottom: 120px
+    @media screen and ( max-width: 1140px )
+        flex-wrap: wrap
+        
 .box
     margin: 25px
     width: 440px
